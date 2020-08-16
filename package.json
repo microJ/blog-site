@@ -1,0 +1,22 @@
+{
+  "name": "blog",
+  "private": "true",
+  "version": "1.0.0",
+  "description": "microJ's blog",
+  "main": "index.js",
+  "repository": "https://microj.github.io",
+  "author": "microJ",
+  "license": "CC BY 4.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "dependencies": {
+    "vuepress": "1.5.3",
+    "vuepress-theme-reco": "1.5.5",
+    "@vuepress/plugin-medium-zoom": "1.5.3",
+    "vuepress-plugin-flowchart": "1.4.3",
+    "@vuepress/plugin-pwa": "1.5.3"
+  }
+}

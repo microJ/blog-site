@@ -1,12 +1,10 @@
 ---
 title: About Me
-categories:
-  - About Me
 tags:
   - About Me
 date: 2020-08-16
-isComment: false
 sidebar: false
+isShowComments: false
 ---
 
-Hello,nice to meet you. 
+Hello, nice to meet you.

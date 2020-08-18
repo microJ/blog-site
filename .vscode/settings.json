@@ -1,0 +1,30 @@
+{
+  "psi-header.lang-config": [
+    {
+      "language": "markdown",
+      "begin": "",
+      "prefix": "",
+      "end": ""
+    }
+  ],
+  "psi-header.templates": [
+    {
+      "language": "markdown",
+      "template": [
+        "---",
+        "title: ",
+        "date: 2020-08-",
+        "sidebar: 'auto'",
+        "categories:",
+        "  - Front-End",
+        "  - Tech",
+        "  - Article",
+        "  - Design",
+        "  - Other",
+        "tags:",
+        "  - ",
+        "---"
+      ]
+    }
+  ]
+}

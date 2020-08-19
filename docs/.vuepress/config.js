@@ -10,8 +10,8 @@ module.exports = {
       {
         rel: "apple-touch-icon",
         sizes: "180x180",
-        href: "/apple-touch-icon.png",
-      },
+        href: "/apple-touch-icon.png"
+      }
     ],
     [
       "link",
@@ -19,8 +19,8 @@ module.exports = {
         rel: "icon",
         type: "image/png",
         sizes: "32x32",
-        href: "/favicon-32x32.png",
-      },
+        href: "/favicon-32x32.png"
+      }
     ],
     [
       "link",
@@ -28,22 +28,31 @@ module.exports = {
         rel: "icon",
         type: "image/png",
         sizes: "16x16",
-        href: "/favicon-16x16.png",
-      },
+        href: "/favicon-16x16.png"
+      }
     ],
     ["link", { rel: "manifest", href: "/site.webmanifest" }],
     [
       "meta",
       {
         name: "viewport",
-        content: "width=device-width,initial-scale=1,user-scalable=no",
-      },
-    ],
+        content: "width=device-width,initial-scale=1,user-scalable=no"
+      }
+    ]
   ],
   theme: "reco",
   themeConfig,
   markdown: {
-    lineNumbers: true,
+    lineNumbers: true
   },
-  plugins: ["@vuepress/medium-zoom", "flowchart"],
+  plugins: [
+    "@vuepress/medium-zoom",
+    "flowchart",
+    [
+      "@vuepress-reco/vuepress-plugin-rss",
+      {
+        site_url: "https://blog.expect2.cyou"
+      }
+    ]
+  ]
 };

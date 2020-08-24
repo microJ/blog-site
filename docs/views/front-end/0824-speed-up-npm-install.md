@@ -9,6 +9,8 @@ tags:
   - yarn
   - yarn install
   - cypress
+  - nrm
+  - .npmrc
 ---
 
 ## 我有一个小问题
@@ -79,3 +81,7 @@ python_mirror=https://npm.taobao.org/mirrors/python/
 `nrm use taobao`
 
 这样系统全局的安装源就被指定为淘宝源了，以后新项目中即使没有 `.npmrc` 指定安装源也可以愉快的从淘宝源安装依赖包了。但是某些依赖包的依赖文件下载问题还是需要 `.npmrc` 来解决鸭 🤣
+
+参考文章：
+
+1. [聊聊 NPM 镜像那些险象环生的坑](https://juejin.im/post/6844904192247595022)

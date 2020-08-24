@@ -3,10 +3,10 @@ module.exports = [
   { text: "TimeLine", link: "/timeline/", icon: "reco-date" },
   { text: "RSS", link: "https://blog.expect2.cyou/rss.xml", icon: "reco-rss" },
   {
-    text: "About Me",
+    text: "About",
     icon: "reco-message",
     items: [
-      { text: "Info", link: "/views/personal-info/", icon: "reco-blog" },
+      { text: "About Me", link: "/views/personal-info/", icon: "reco-blog" },
       { text: "NPM", link: "https://www.npmjs.com/~microj", icon: "reco-npm" },
       { text: "GitHub", link: "https://github.com/microJ", icon: "reco-github" }
     ]

@@ -11,6 +11,7 @@ module.exports = Object.assign({}, themeReco, {
   searchMaxSuggestions: 10,
   // 自动形成侧边导航
   sidebar: 'auto',
+  subSidebar: "auto",
   authorAvatar: "/logo.png",
   valineConfig: {
     appId: '7pWKyFjLwVXJAIcndpUY6ep3-gzGzoHsz',// your appId

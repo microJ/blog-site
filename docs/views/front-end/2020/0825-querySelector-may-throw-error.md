@@ -44,7 +44,7 @@ HTML5 中 [允许数字作为起始字符](https://html.spec.whatwg.org/multipag
 
 ## 结论：
 
-综合来看，推荐大家还是按照 [CSS 标识符的规范](https://www.w3.org/TR/CSS22/syndata.html#value-def-identifier) 去书写选择器鸭。
+综合来看，推荐大家还是按照 [CSS 标识符的规范](https://www.w3.org/TR/CSS22/syndata.html#value-def-identifier) 去书写选择器鸭。但是如果是公共库，在获取元素的时候还是使用兼容性写法吧。
 
 CSS 标识符的规范：
 

@@ -1,4 +1,5 @@
 const themeConfig = require("./config/theme/");
+const path = require("path");
 
 module.exports = {
   title: "叫我小J",
@@ -54,5 +55,11 @@ module.exports = {
         site_url: "https://blog.expect2.cyou"
       }
     ]
-  ]
+  ],
+  chainWebpack: config => {
+    config.resolve.alias.set(
+      "@images",
+      path.resolve(__dirname, "../views/assets/images")
+    );
+  }
 };

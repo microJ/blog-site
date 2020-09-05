@@ -13,11 +13,11 @@
     "build": "vuepress build docs"
   },
   "dependencies": {
-    "vuepress": "1.5.3",
-    "vuepress-theme-reco": "1.5.5",
-    "@vuepress/plugin-medium-zoom": "1.5.3",
+    "@vuepress-reco/vuepress-plugin-rss": "1.0.2",
+    "@vuepress/plugin-medium-zoom": "1.5.4",
+    "@vuepress/plugin-pwa": "1.5.4",
+    "vuepress": "1.5.4",
     "vuepress-plugin-flowchart": "1.4.3",
-    "@vuepress/plugin-pwa": "1.5.3",
-    "@vuepress-reco/vuepress-plugin-rss": "1.0.2"
+    "vuepress-theme-reco": "1.5.5"
   }
 }

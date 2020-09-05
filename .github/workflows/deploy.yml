@@ -14,7 +14,7 @@ jobs:
       # 安装 yarn
       - run: curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
       - run: echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-      - run: sudo apt update && sudo apt install yarn
+      - run: sudo apt install yarn
 
       # 安装依赖
       - run: yarn install

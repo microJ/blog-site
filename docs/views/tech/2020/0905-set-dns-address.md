@@ -16,12 +16,25 @@ tags:
 
 常见的解决方案就是使用公开可信赖的 `公共 DNS`。常见的公共 DNS 服务的 IP 地址有 `8.8.8.8`、`114.114.114.114`、`223.5.5.5` 等
 
-设置方法可以参考：https://www.alidns.com/setup/
+设置方法可以参考：[https://www.alidns.com/setup/](https://www.alidns.com/setup/)
 
 ## Private DNS
 
 `Private DNS` 是安卓 9+手机[提供的功能](https://android-developers.googleblog.com/2018/04/dns-over-tls-support-in-android-p.html)，通过支持 DoT(DNS over TLS)，使 DNS 查询过程是加密的，这样保证了安全性和隐私性
 
-主机名这里选择 `1dot1dot1dot1.cloudflare-dns.com`，支持 DoT(DNS over TLS)
+国内可用的域名：
 
-配置方法可以查看 https://blog.cloudflare.com/enable-private-dns-with-1-1-1-1-on-android-9-pie/
+- dns.alidns.com
+- 1dot1dot1dot1.cloudflare-dns.com
+- dns.containerpi.com
+
+各位可以根据当前的网络情况进行选择
+
+配置方法可以查看 [https://blog.cloudflare.com/enable-private-dns-with-1-1-1-1-on-android-9-pie/](https://blog.cloudflare.com/enable-private-dns-with-1-1-1-1-on-android-9-pie/)
+
+<br>
+
+参考资料：
+
+1. https://github.com/curl/curl/wiki/DNS-over-HTTPS
+2. https://alidns.com/faqs/#dns-safe

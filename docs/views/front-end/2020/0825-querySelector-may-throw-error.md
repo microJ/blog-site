@@ -1,5 +1,5 @@
 ---
-title: document.querySelector 报错的问题
+title: 或许你不应该使用 document.querySelector
 date: 2020-08-25
 categories:
   - Front-End

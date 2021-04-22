@@ -3,10 +3,6 @@ title: 关于 MBP 存储空间不足需要减少虚拟机占用空间进而安�
 date: 2020-12-04
 categories:
   - Tech
-  - Article
-  - Design
-  - Wisper
-  - Other
 tags:
   - Windows Thin PC
   - Macbook Pro

@@ -1,14 +1,15 @@
 ---
-title: 思路明确手写 Promise (一)：分析 Promise 重点写法
+title: 思路明确手写 Promise (一)：分析 Promise 核心写法
 date: 2021-04-20
 categories:
   - Front-End
 tags:
   - Promise
-  - 手写Promise
+  - Promise 源码
+  - 手写 Promise
 ---
 
-Promise 的重点其实就在于几点：
+Promise 的核心其实就在于几点：
 
 1. 创建实例 romise:
 
@@ -20,7 +21,7 @@ Promise 的重点其实就在于几点：
 
    `p.catch(onRejected)`
 
-3. 内部异常处理:
+3. 函数运行时的异常处理:
 
    `try{ .. } catch(err){ onRejected(err) }`
 
@@ -34,23 +35,26 @@ Promise 的重点其实就在于几点：
 
 整体篇节：[一](./write-promise-polyfill-with-a-clear-idea-1.html)、[二](./write-promise-polyfill-with-a-clear-idea-2.html)、[三](./write-promise-polyfill-with-a-clear-idea-3.html)、[四](./write-promise-polyfill-with-a-clear-idea-4.html)
 
-## 分析 Promise 重点写法
+## 分析 Promise 核心写法
 
 ### 创建 Promise
 
 ```js
 var p = new Promise(executor)
 function executor(resolve, reject) {
-  resolve()
+  resolve(result)
   // reject()
 }
 ```
 
+<div id="tag1"></div>
+
 已知：
 
 1. Promise 是构造函数，接收一个执行函数
-2. new Promise 后，返回一个 promise 实例
-3. 执行函数接受 resolve/reject 函数用来改变返回的 promise 状态
+2. new Promise 后，返回一个 promise 实例，拥有 .then/.catch 方法
+3. 执行函数接受 resolve/reject 函数用来改变返回的 promise 状态，并传递值
+4. 如果执行函数运行时抛出异常，则变更 promise 状态为 rejected
 
 ### then/catch
 
@@ -79,6 +83,8 @@ var p4 = Promise.resolve().then(() => p3)
 console.log(p3 === p4) // false
 ```
 
+<div id="tag2"></div>
+
 已知：
 
 1. 实例 promise 上有 then / catch 方法
@@ -97,11 +103,11 @@ console.log(p3 === p4) // false
 
 ## 总结
 
-基于以上已知内容，实现的重点在于：
+基于以上已知内容，实现的核心在于：
 
 1. 创建实例 promise
 2. promise 的状态变化时，触发 then/catch 注册的回调函数，并传递结果
-3. 内部异常处理
+3. 函数运行时的异常处理
 4. 回调函数的异步执行
 
 ---

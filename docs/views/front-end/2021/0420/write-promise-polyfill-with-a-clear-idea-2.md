@@ -137,7 +137,7 @@ class MyPromise {
 class MyPromise {
   // ...
   /**
-   * { handleFulfilled, handleRejected }
+   * { handleFulfilledAsync, handleRejectedAsync }
    * .then() 时候注册
    * promiseState 变更的时候执行
    */
@@ -151,27 +151,34 @@ class MyPromise {
     })
 
     // 改变 nextPromise 的状态并向其传递值
-    const handleFulfilled = () => {
-      rejectWhenAbnormal(() => {
-        const promiseResult = onFulfilled()
-        nextResolve(promiseResult)
-      }, nextReject)
+    const handleFulfilledAsync = () => {
+      nextTick(() => {
+        rejectWhenAbnormal(() => {
+          const promiseResult = onFulfilled()
+          nextResolve(promiseResult)
+        }, nextReject)
+      })
     }
 
-    const handleRejected = () => {
-      rejectWhenAbnormal(() => {
-        const promiseResult = onRejected()
-        nextResolve(promiseResult)
-      }, nextReject)
+    const handleRejectedAsync = () => {
+      nextTick(() => {
+        rejectWhenAbnormal(() => {
+          const promiseResult = onRejected()
+          nextResolve(promiseResult)
+        }, nextReject)
+      })
     }
 
-    // 根据状态提前处理对 nextPromise 的状态变更
+    // 根据状态处理对 nextPromise 的状态变更
     if (this.promiseState === PENDING) {
-      this.stateChangeHandlers.push({ handleFulfilled, handleRejected })
+      this.stateChangeHandlers.push({
+        handleFulfilledAsync,
+        handleRejectedAsync,
+      })
     } else if (this.promiseState === FULFILLED) {
-      handleFulfilled()
+      handleFulfilledAsync()
     } else {
-      handleRejected()
+      handleRejectedAsync()
     }
 
     return nextPromise
@@ -195,13 +202,13 @@ class MyPromise {
     if (this._promiseState !== PENDING) {
       return
     }
-    this.promiseState = state
+    this._promiseState = state
 
     this.stateChangeHandlers.forEach(handler => {
       if (state === FULFILLED) {
-        nextTick(handler.handleFulfilled)
+        nextTick(handler.handleFulfilledAsync)
       } else {
-        nextTick(handler.handleRejected)
+        nextTick(handler.handleRejectedAsync)
       }
     })
   }
@@ -211,7 +218,54 @@ class MyPromise {
 3. 向后面的 `promise` 传递值；如果传递的值是 `promise`，则使用这个 `promise` 的状态
 
 ```js
-//
+// 改变 nextPromise 的状态并向其传递值
+const handleFulfilledAsync = () => {
+  nextTick(() => {
+    rejectWhenAbnormal(() => {
+      const nextPromiseResult = onFulfilled(this.promiseResult)
+      if (isPromise(nextPromiseResult)) {
+        nextPromiseResult.then(nextResolve, nextReject)
+      } else {
+        nextResolve(nextPromiseResult)
+      }
+    }, nextReject)
+  })
+}
+
+const handleRejectedAsync = () => {
+  nextTick(() => {
+    rejectWhenAbnormal(() => {
+      const nextPromiseResult = onRejected(this.promiseResult)
+      if (isPromise(nextPromiseResult)) {
+        nextPromiseResult.then(nextResolve, nextReject)
+      } else {
+        nextResolve(nextPromiseResult)
+      }
+    }, nextReject)
+  })
+}
+```
+
+上面的 `handleFulfilledAsync`、`handleRejectedAsync` 可以合并为一个函数：
+
+```js
+// 改变 nextPromise 的状态并向其传递值
+const handleFulfilledAsync = () => handleFulfilledOrRejectedAsync(onFulfilled)
+
+const handleRejectedAsync = () => handleFulfilledOrRejectedAsync(onRejected)
+
+const handleFulfilledOrRejectedAsync = handler => {
+  nextTick(() => {
+    rejectWhenAbnormal(() => {
+      const nextPromiseResult = handler(this.promiseResult)
+      if (isPromise(nextPromiseResult)) {
+        nextPromiseResult.then(nextResolve, nextReject)
+      } else {
+        nextResolve(nextPromiseResult)
+      }
+    }, nextReject)
+  })
+}
 ```
 
 ### .catch 方法

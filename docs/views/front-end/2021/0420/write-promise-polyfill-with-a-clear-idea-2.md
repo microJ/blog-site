@@ -206,9 +206,9 @@ class MyPromise {
 
     this.stateChangeHandlers.forEach(handler => {
       if (state === FULFILLED) {
-        nextTick(handler.handleFulfilledAsync)
+        handler.handleFulfilledAsync()
       } else {
-        nextTick(handler.handleRejectedAsync)
+        handler.handleRejectedAsync()
       }
     })
   }

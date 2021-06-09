@@ -35,6 +35,8 @@ Promise 的核心其实就在于几点：
 
 整体篇节：[一](./write-promise-polyfill-with-a-clear-idea-1.html)、[二](./write-promise-polyfill-with-a-clear-idea-2.html)、[三](./write-promise-polyfill-with-a-clear-idea-3.html)、[四](./write-promise-polyfill-with-a-clear-idea-4.html)
 
+源码：https://github.com/microJ/toy-promise
+
 ## 分析 Promise 核心写法
 
 ### 创建 Promise
@@ -115,3 +117,4 @@ console.log(p3 === p4) // false
 参考资料：
 
 1. https://promisesaplus.com/
+2. https://github.com/microJ/toy-promise

@@ -72,3 +72,7 @@ http://forum.oszone.net/thread-257198.html
 <img src="~@images/2020/1204-2.png" alt="空间占用对比" class="half-width-image" >
 
 把 win10 虚拟机删掉后，相比于原来就可以清理出 20G 的空间了，美滋滋
+
+## 其他
+
+如果需要 xp 的话，推荐 [WinXP SP3 纯净安装版](https://dragonfly.fun/soft/winxp.html)，安装完只有 1.23G 大小，存档后只有 474.1MB，WinXP YYDS 💪。

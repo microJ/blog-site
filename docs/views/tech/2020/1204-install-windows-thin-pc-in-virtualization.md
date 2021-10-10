@@ -75,4 +75,4 @@ http://forum.oszone.net/thread-257198.html
 
 ## 其他
 
-如果需要 xp 的话，推荐 [WinXP SP3 纯净安装版](https://dragonfly.fun/soft/winxp.html)，安装完只有 1.23G 大小，存档后只有 474.1MB，WinXP YYDS 💪。
+如果需要 xp 的话，推荐 [WinXP SP3 纯净安装版](https://dragonfly.fun/soft/winxp.html)，安装完只有 1.23G 大小，存档后只有 474.1MB，运行内存只需要分配 1G，WinXP YYDS 💪。

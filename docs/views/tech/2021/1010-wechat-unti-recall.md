@@ -2,12 +2,7 @@
 title: WinXP 微信防撤回
 date: 2021-10-10
 categories:
-  - Front-End
   - Tech
-  - Article
-  - Design
-  - Wisper
-  - Other
 tags:
   - 微信
   - WinXP

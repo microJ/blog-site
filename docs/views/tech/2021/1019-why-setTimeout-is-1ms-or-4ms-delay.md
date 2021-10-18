@@ -7,9 +7,9 @@ tags:
   - setTimeout
 ---
 
-<!-- more -->
-
 setTimeout 最小执行间隔是 1ms 或者 4ms
+
+<!-- more -->
 
 ---
 

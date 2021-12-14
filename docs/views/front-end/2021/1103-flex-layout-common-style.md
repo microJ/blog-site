@@ -1,5 +1,5 @@
 ---
-title: 在 LESS 中快速优雅的使用 Flex 布局
+title: 优雅高效的使用 Flex 布局
 date: 2021-11-03
 categories:
   - Front-End
@@ -8,7 +8,7 @@ tags:
   - Less.js
 ---
 
-为 Flex 提效
+让 Flex 使用优雅且高效
 
 <!-- more -->
 

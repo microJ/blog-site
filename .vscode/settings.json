@@ -13,7 +13,7 @@
       "template": [
         "---",
         "title: ",
-        "date: 2021-10-",
+        "date: 2022-01-",
         "categories:",
         "  - Front-End",
         "  - Tech",
@@ -24,7 +24,9 @@
         "tags:",
         "  - ",
         "---",
+        "",
         "there is introduction.",
+        "",
         "<!-- more -->",
         "",
         "---",

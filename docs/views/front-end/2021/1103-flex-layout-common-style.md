@@ -20,12 +20,12 @@ tags:
 
 我们可以按照**人在空间中的方向感知**进行规则命名： `flex-{排布类型}-{水平对齐类型}-{上下对齐类型}`
 
-这套规则的好处就是：
+**这套规则的好处就是：**
 
-1. 面向使用者友好，不需要特别了解 Flex 背后的细节
-2. 直观可维护
+1. 易用，使用者不需要特别了解 Flex 细节
+3. 直观易维护
 
-排布类型（方向）：
+**排布类型（方向）：**
 
 - row
 
@@ -35,7 +35,7 @@ tags:
 
   在垂直方向上排布成列
 
-水平对齐类型：
+**水平对齐类型：**
 
 - left
 - center
@@ -44,7 +44,7 @@ tags:
 - around
 - evenly
 
-垂直对齐类型：
+**垂直对齐类型：**
 
 - top
 - middle
@@ -57,7 +57,7 @@ tags:
 
 组合成以下布局：
 
-排布成行 row:
+**排布成行 row:**
 
 - flex-row-left-top
 - flex-row-left-middle
@@ -78,7 +78,7 @@ tags:
 - flex-row-evenly-middle
 - flex-row-evenly-bottom
 
-排布成列 col:
+**排布成列 col:**
 
 - flex-col-left-top
 - flex-col-left-middle

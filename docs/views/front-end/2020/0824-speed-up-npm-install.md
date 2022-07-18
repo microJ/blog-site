@@ -39,25 +39,25 @@ tags:
 # 在服务端执行时可能需要最高权限执行
 unsafe-perm=true
 # 指定依赖的安装源
-registry=https://registry.npm.taobao.org/
+registry=https://registry.npmmirror.com/
 # 指定 node.js 的安装源，某些依赖包可能需要下载 node.js
-disturl=https://npm.taobao.org/mirrors/node/
+disturl=https://npmmirror.com/mirrors/node/
 
 # 一些依赖包内部需要下载的依赖文件，以下变量会被相关依赖包读取到并使用
-sass_binary_site=https://npm.taobao.org/mirrors/node-sass/
-phantomjs_cdnurl=https://npm.taobao.org/mirrors/phantomjs/
-electron_mirror=https://npm.taobao.org/mirrors/electron/
-chromedriver_cdnurl=https://npm.taobao.org/mirrors/chromedriver/
-operadriver_cdnurl=https://npm.taobao.org/mirrors/operadriver/
-selenium_cdnurl=https://npm.taobao.org/mirrors/selenium/
-node_inspector_cdnurl=https://npm.taobao.org/mirrors/node-inspector/
-fsevents_binary_host_mirror=http://npm.taobao.org/mirrors/fsevents/
-puppeteer_download_host=https://npm.taobao.org/mirrors/
-sentrycli_cdnurl=https://npm.taobao.org/mirrors/sentry-cli/
-sharp_binary_host=https://npm.taobao.org/mirrors/sharp/
-sharp_libvips_binary_host=https://npm.taobao.org/mirrors/sharp-libvips/
-sqlite3_binary_site=https://npm.taobao.org/mirrors/sqlite3/
-python_mirror=https://npm.taobao.org/mirrors/python/
+sass_binary_site=https://npmmirror.com/mirrors/node-sass/
+phantomjs_cdnurl=https://npmmirror.com/mirrors/phantomjs/
+electron_mirror=https://npmmirror.com/mirrors/electron/
+chromedriver_cdnurl=https://npmmirror.com/mirrors/chromedriver/
+operadriver_cdnurl=https://npmmirror.com/mirrors/operadriver/
+selenium_cdnurl=https://npmmirror.com/mirrors/selenium/
+node_inspector_cdnurl=https://npmmirror.com/mirrors/node-inspector/
+fsevents_binary_host_mirror=https://npmmirror.com/mirrors/fsevents/
+puppeteer_download_host=https://npmmirror.com/mirrors/
+sentrycli_cdnurl=https://npmmirror.com/mirrors/sentry-cli/
+sharp_binary_host=https://npmmirror.com/mirrors/sharp/
+sharp_libvips_binary_host=https://npmmirror.com/mirrors/sharp-libvips/
+sqlite3_binary_site=https://npmmirror.com/mirrors/sqlite3/
+python_mirror=https://npmmirror.com/mirrors/python/
 ```
 
 `NPM` 和 `yarn` 都能识别 `.npmrc` 文件。完美解决上述问题。
